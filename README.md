@@ -182,7 +182,7 @@ Los análisis y experimentos correspondientes al LAB03 se encuentran en:
 
 ```text
 
-notebooks/
+notebooks/0\_lab03\_ensamble\_green.ipynb
 
 ```
 
@@ -260,7 +260,7 @@ Para reproducir el proyecto:
 
 6\. Ejecutar `pytest -q`.
 
-7\. Ejecutar los notebooks ubicados en `notebooks/`.
+7\. Ejecutar el notebook ubicado en `notebooks/`.
 
 
 
@@ -272,7 +272,7 @@ El proyecto se encuentra versionado mediante Git y publicado en GitHub.
 
 
 
-\*\*Repositorio:\*\* `INF8239\_U01\_LAB03`
+\*\*Repositorio:\*\* INF8239\_U01\_LAB03
 
 
 
