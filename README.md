@@ -1,286 +1,117 @@
-\# INF8239\_U01 - Ensambles, reducción dimensional y Green AI
+# INF8239_U01 - Ensambles, reducción dimensional y Green AI
 
+## U01.LAB03 - Ejercicio 02
 
+**Maestro:** Edwin Ramón José Nolasco
+**Estudiante:** Laudys Jerusi Zapata
+**Programa:** Maestría en Ciencia de Datos e Inteligencia Artificial
+**Universidad:** Universidad Autónoma de Santo Domingo (UASD)
+**Asignatura:** Ciencia de Datos e Inteligencia Artificial
+**Práctica:** LAB03 - Ensambles, reducción dimensional y Green AI
 
-\## U01.LAB03 - Ejercicio 02
+---
 
+## Descripción
 
+Este proyecto corresponde al **LAB03** de la asignatura Ciencia de Datos e Inteligencia Artificial.
 
-\*\*Maestro:\*\* Edwin Ramón José Nolasco
+La práctica aborda técnicas de **ensamble de modelos**, **reducción dimensional** y conceptos de **Green AI**, considerando tanto el desempeño de los modelos como aspectos relacionados con el costo computacional y la eficiencia.
 
-\*\*Estudiante:\*\* Laudys Jerusi Zapata
-
-\*\*Programa:\*\* Maestría en Ciencia de Datos e Inteligencia Artificial
-
-\*\*Universidad:\*\* Universidad Autónoma de Santo Domingo (UASD)
-
-\*\*Asignatura:\*\* Ciencia de Datos e Inteligencia Artificial
-
-\*\*Práctica:\*\* LAB03 - Ensambles, reducción dimensional y Green AI
-
-
-
-\---
-
-
-
-\## Descripción
-
-
-
-Este proyecto corresponde al \*\*LAB03\*\* de la asignatura Ciencia de Datos e Inteligencia Artificial.
-
-
-
-La práctica aborda técnicas de \*\*ensamble de modelos\*\*, \*\*reducción dimensional\*\* y conceptos de \*\*Green AI\*\*, considerando tanto el desempeño de los modelos como aspectos relacionados con el costo computacional y la eficiencia.
-
-
-
-\## Estructura del proyecto
-
-
+## Estructura del proyecto
 
 ```text
-
-INF8239\_U01\_LAB03/
-
+INF8239_U01_LAB03/
 ├── data/
-
+│   └── raw/
 ├── docs/
-
 ├── notebooks/
-
+│   ├── 0_lab03_ensamble_green.ipynb
+│   └── reports/
+│       ├── confusion_matrix_logistic.png
+│       ├── green_ai_results.csv
+│       ├── pareto_frontier.png
+│       ├── tsne_seed_42.png
+│       ├── tsne_seed_7.png
+│       └── models/
 ├── reports/
-
 │   └── models/
-
 ├── src/
-
-│   └── inf8239\_u01/
-
+│   └── inf8239_u01/
+│       ├── __init__.py
 │       └── green.py
-
 ├── tests/
-
-│   └── test\_green.py
-
+│   └── test_green.py
 ├── .gitignore
-
 └── README.md
-
 ```
 
+## Dataset
 
+Para el desarrollo del laboratorio se utiliza el conjunto de datos correspondiente a **Pruebas Nacionales 2016-2024**.
 
-\## Requisitos
-
-
-
-\* Python 3.13
-
-\* NumPy
-
-\* Pandas
-
-\* Scikit-learn
-
-\* Matplotlib
-
-\* Seaborn
-
-\* Pytest
-
-
-
-\## Instalación
-
-
-
-Crear el entorno virtual:
-
-
-
-```bash
-
-python -m venv .venv
-
-```
-
-
-
-Activarlo en Windows:
-
-
-
-```bat
-
-.venv\\Scripts\\activate
-
-```
-
-
-
-Instalar las dependencias:
-
-
-
-```bat
-
-pip install numpy pandas scikit-learn matplotlib seaborn pytest
-
-```
-
-
-
-\## Ejecución de las pruebas
-
-
-
-El proyecto utiliza una estructura `src/`. En Windows, configurar el acceso al código fuente:
-
-
-
-```bat
-
-set PYTHONPATH=src
-
-```
-
-
-
-Ejecutar las pruebas:
-
-
-
-```bat
-
-pytest -q
-
-```
-
-
-
-Resultado obtenido en la verificación del proyecto:
-
-
+El archivo de datos se encuentra en:
 
 ```text
-
-2 passed in 0.41s
-
+data/raw/pruebas_nacionales_2016_2024.csv
 ```
 
+El dataset se utiliza para desarrollar los experimentos de clasificación, ensambles, reducción dimensional y análisis de eficiencia computacional.
 
+## Metodología
 
-\## Notebook
+El LAB03 integra diferentes técnicas de aprendizaje automático y análisis de datos.
 
+Entre los procedimientos desarrollados se incluyen:
 
+* Preparación y selección de variables.
+* Estandarización de los datos.
+* Clasificación mediante diferentes modelos.
+* Comparación de modelos individuales y modelos de ensamble.
+* Evaluación mediante métricas de clasificación.
+* Matriz de confusión.
+* Reducción dimensional mediante **t-SNE**.
+* Comparación de diferentes semillas.
+* Evaluación de costo computacional.
+* Análisis de **Green AI**.
+* Construcción de una frontera de Pareto considerando desempeño y eficiencia.
 
-Los análisis y experimentos correspondientes al LAB03 se encuentran en:
+## Modelos evaluados
 
+Durante el laboratorio se utilizan diferentes modelos de clasificación, entre ellos:
 
+* Regresión Logística.
+* SVM.
+* Random Forest.
+* Boosting.
+
+También se realizan comparaciones entre diferentes configuraciones de los modelos para analizar el comportamiento del desempeño y el costo computacional.
+
+## Green AI
+
+El componente de **Green AI** considera aspectos relacionados con la eficiencia computacional de los modelos.
+
+Se registran variables como:
+
+* Tiempo de entrenamiento.
+* Tiempo de predicción.
+* Métricas de desempeño.
+* Comparación entre modelos.
+* Relación entre desempeño y costo computacional.
+
+Los resultados se almacenan en:
 
 ```text
-
-notebooks/0\_lab03\_ensamble\_green.ipynb
-
+notebooks/reports/green_ai_results.csv
 ```
 
-
-
-Los notebooks deben ejecutarse utilizando el entorno virtual del proyecto.
-
-
-
-\## Código fuente
-
-
-
-El código reutilizable se encuentra en:
-
-
+La frontera de Pareto se encuentra en:
 
 ```text
-
-src/inf8239\_u01/green.py
-
+notebooks/reports/pareto_frontier.png
 ```
 
+## Reducción dimensional
 
+El laboratorio utiliza **t-SNE** como técnica de reducción dimensional para visualizar los datos en un espacio de menor dimensión.
 
-Este módulo contiene las funciones desarrolladas para el componente de \*\*Green AI\*\*.
-
-
-
-\## Pruebas automatizadas
-
-
-
-Las pruebas se encuentran en:
-
-
-
-```text
-
-tests/test\_green.py
-
-```
-
-
-
-Actualmente, la ejecución de `pytest -q` produce:
-
-
-
-```text
-
-2 passed
-
-```
-
-
-
-\## Reproducibilidad
-
-
-
-Para reproducir el proyecto:
-
-
-
-1\. Clonar el repositorio.
-
-2\. Crear el entorno virtual.
-
-3\. Activar el entorno virtual.
-
-4\. Instalar las dependencias.
-
-5\. Configurar `PYTHONPATH=src`.
-
-6\. Ejecutar `pytest -q`.
-
-7\. Ejecutar el notebook ubicado en `notebooks/`.
-
-
-
-\## Repositorio
-
-
-
-El proyecto se encuentra versionado mediante Git y publicado en GitHub.
-
-
-
-\*\*Repositorio:\*\* INF8239\_U01\_LAB03
-
-
-
-\*\*Autora:\*\* Laudys Jerusi Zapata
-
-
-
-\*\*Universidad:\*\* Universidad Autónoma de Santo Domingo (UASD)
-
-
-
+Se realiza
